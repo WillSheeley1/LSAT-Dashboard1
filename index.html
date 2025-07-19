@@ -2,53 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LSAT Leveling</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LSAT Solo Leveling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="levelup-animation" class="hidden">
+    <div class="levelup-banner">LEVEL UP! You reached Level <span id="levelup-number"></span> 🚀</div>
+    <div class="fireworks"></div>
+  </div>
+
   <div class="container">
-    <h1>LSAT Leveling</h1>
+    <h1>LSAT Solo Leveling</h1>
+
+    <div class="header">
+      <h2>Hello, <span id="username">User</span>!</h2>
+      <div class="xp-display">
+        XP: <span id="xp">0</span> / <span id="xp-needed">100</span>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+      <div class="level-display">Level: <span id="level">0</span></div>
+      <div id="alert" class="alert hidden"></div>
+    </div>
+
     <div class="dashboard">
-      <div class="header">
-        <h2>Hello, William</h2>
-        <p>Total Points: <span id="totalPoints">0</span></p>
-        <p>Change: <span id="changeStats">+0 today</span></p>
-        <p class="alert" id="alertBox"></p>
-      </div>
-
-      <div class="log-section">
-        <h3>Log New Activity</h3>
-
+      <section class="log-section">
+        <h3>Log a Practice Test</h3>
         <div class="log-item">
-          <h4>Practice Test</h4>
-          <input type="number" id="testScore" placeholder="Score"/>
-          <button onclick="logPracticeTest()">Log Test</button>
+          <label>Date: <input type="date" id="test-date" /></label><br/>
+          <label>Score: <input type="number" id="test-score" min="120" max="180" /></label><br/>
+          <button id="add-test">Add Test</button>
         </div>
+      </section>
 
+      <section class="log-section">
+        <h3>Log a Drilling Session</h3>
         <div class="log-item">
-          <h4>Drilling Session</h4>
-          <input type="number" id="drillHours" placeholder="Hours"/>
-          <input type="text" id="drillWrong" placeholder="Questions Wrong"/>
-          <button onclick="logDrill()">Log Drilling</button>
+          <label>Date: <input type="date" id="drill-date" /></label><br/>
+          <label>Hours: <input type="number" id="drill-hours" min="0" step="0.1" /></label><br/>
+          <button id="add-drill">Add Drilling</button>
         </div>
+      </section>
 
+      <section class="log-section">
+        <h3>Log a Practice Section</h3>
         <div class="log-item">
-          <h4>Practice Section</h4>
-          <input type="number" id="sectionRight" placeholder="Questions Right"/>
-          <input type="text" id="sectionWrong" placeholder="Questions Wrong"/>
-          <button onclick="logSection()">Log Section</button>
+          <label>Date: <input type="date" id="section-date" /></label><br/>
+          <label>Questions Right: <input type="number" id="section-right" min="0" /></label><br/>
+          <label>Questions Wrong: <input type="number" id="section-wrong" min="0" /></label><br/>
+          <button id="add-section">Add Section</button>
         </div>
-      </div>
+      </section>
 
-      <div class="records">
-        <h3>Activity Records</h3>
-        <ul id="recordList"></ul>
-      </div>
+      <section class="records">
+        <h3>Records</h3>
+        <div id="records-list">
+          <!-- Records will populate here -->
+        </div>
+      </section>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+  
