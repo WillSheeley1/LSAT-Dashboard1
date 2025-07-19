@@ -266,4 +266,81 @@ button:hover {
 }
 
 .theme-80 {
-  background
+  background: linear-gradient(135deg, #654ea3, #eaafc8);
+  color: #3a1c4a;
+}
+
+.theme-100 {
+  background: radial-gradient(circle, #ff512f, #dd2476, #8e2de2, #4a00e0);
+  color: #f8f8ff;
+  font-weight: 900;
+  text-shadow:
+    0 0 10px #ff512f,
+    0 0 20px #dd2476,
+    0 0 30px #8e2de2,
+    0 0 40px #4a00e0;
+}
+
+/* Buttons and other elements adapt to theme colors */
+
+.theme-5 button {
+  background: #cc5333;
+}
+
+.theme-5 button:hover {
+  background: #912f1c;
+}
+
+.theme-10 button {
+  background: #4ca1af;
+}
+
+.theme-10 button:hover {
+  background: #367a82;
+}
+
+.theme-20 button {
+  background: #000000;
+  color: #d4d4d4;
+}
+
+.theme-20 button:hover {
+  background: #222222;
+}
+
+.theme-40 button {
+  background: #203a43;
+  color: #a6c0cd;
+}
+
+.theme-40 button:hover {
+  background: #15252d;
+}
+
+.theme-60 button {
+  background: #99f2c8;
+  color: #013220;
+}
+
+.theme-60 button:hover {
+  background: #70c6a0;
+}
+
+.theme-80 button {
+  background: #eaafc8;
+  color: #3a1c4a;
+}
+
+.theme-80 button:hover {
+  background: #d37e9d;
+}
+
+.theme-100 button {
+  background: #dd2476;
+  color: #f8f8ff;
+  font-weight: 900;
+}
+
+.theme-100 button:hover {
+  background: #8e2de2;
+}
