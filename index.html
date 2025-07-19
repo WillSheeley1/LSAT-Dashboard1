@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSAT Solo Leveling</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>LSAT Solo Leveling</h1>
+    <div class="dashboard">
+      <div class="header">
+        <h2>Hello, [Your Name]</h2>
+        <p>Total Points: <span id="totalPoints">0</span></p>
+        <p>Change: <span id="changeStats">+0 today</span></p>
+        <p class="alert" id="alertBox"></p>
+      </div>
+
+      <div class="log-section">
+        <h3>Log New Activity</h3>
+
+        <div class="log-item">
+          <h4>Practice Test</h4>
+          <input type="number" id="testScore" placeholder="Score"/>
+          <button onclick="logPracticeTest()">Log Test</button>
+        </div>
+
+        <div class="log-item">
+          <h4>Drilling Session</h4>
+          <input type="number" id="drillHours" placeholder="Hours"/>
+          <input type="text" id="drillWrong" placeholder="Questions Wrong"/>
+          <button onclick="logDrill()">Log Drilling</button>
+        </div>
+
+        <div class="log-item">
+          <h4>Practice Section</h4>
+          <input type="number" id="sectionRight" placeholder="Questions Right"/>
+          <input type="text" id="sectionWrong" placeholder="Questions Wrong"/>
+          <button onclick="logSection()">Log Section</button>
+        </div>
+      </div>
+
+      <div class="records">
+        <h3>Activity Records</h3>
+        <ul id="recordList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
